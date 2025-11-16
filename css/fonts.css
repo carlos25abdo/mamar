@@ -1,0 +1,127 @@
+/* Enhanced Modern Typography System - Multi-language Support */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+/* Enhanced Variable Font Loading for Performance */
+@supports (font-variation-settings: normal) {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+}
+
+/* Enhanced Font Face Declarations */
+html {
+  font-family: var(--font-family-sans);
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  font-variant-ligatures: common-ligatures contextual;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+@font-face {
+  font-family: 'BigVesta Arabic Beta';
+  src: url('../fonts/BigVesta-Arabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Enhanced Heading Styles */
+.font-display {
+  font-family: var(--font-family-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-feature-settings: "ss01" 1, "ss02" 1;
+}
+
+.font-sans {
+  font-family: var(--font-family-sans);
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.font-mono {
+  font-family: var(--font-family-mono);
+  font-feature-settings: "kern" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Enhanced RTL Support */
+[dir="rtl"] {
+  font-family: "Tajawal", "Cairo", var(--font-family-sans);
+}
+
+[dir="rtl"] .font-display {
+  font-family: "Amiri", "Tajawal", var(--font-family-display);
+  letter-spacing: 0;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: "Amiri", "Tajawal", serif;
+  font-weight: 700;
+}
+
+/* Enhanced Text Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  text-shadow: none;
+}
+
+/* New: Typography Responsive Scaling */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .font-display {
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Enhanced Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* High Contrast Typography */
+@media (prefers-contrast: high) {
+  html {
+    font-weight: 600;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+  
+  .font-light,
+  .font-extralight,
+  .font-thin {
+    font-weight: 500;
+  }
+}

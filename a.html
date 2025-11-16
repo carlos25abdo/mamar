@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>مرمرة لمستلزمات الرخام والجرانيت</title>
+  <meta name="description" content="شركة رائدة في توفير أدوات ومستلزمات الرخام والجرانيت بأعلى معايير الجودة والاحترافية في ليبيا" />
+  <link rel="icon" href="./img/logo1.jpg" />
+
+  <!-- أسلوب تصميم شبيه بالمنارة: أزرق داكن + ذهبي، RTL، رسبونسف -->
+  <style>
+    :root{
+      --brand:#143b5f;          /* الأزرق الداكن */
+      --accent:#f5b400;         /* الذهبي */
+      --text:#0f172a;           /* نص أساسي */
+      --muted:#64748b;          /* نص ثانوي */
+      --bg:#ffffff;             /* خلفية */
+      --chip:#f1f5f9;           /* شرائح التصنيفات */
+      --radius:16px;            /* تدوير حواف */
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui, Segoe UI, Roboto, Arial; background:var(--bg); color:var(--text); line-height:1.7}
+    a{color:inherit}
+
+    /* شريط علوي موجز */
+    .topbar{background:var(--brand);color:#fff;text-align:center;font-size:.9rem;padding:.4rem .75rem}
+
+    /* رأس الموقع */
+    header.site-header{position:sticky;top:0;z-index:60;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .container{max-width:1200px;margin:auto;padding:0 1rem}
+    .nav-row{display:flex;align-items:center;gap:1rem;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+    .brand img{width:44px;height:44px;border-radius:10px}
+    .brand-name{color:var(--brand);font-weight:900;font-size:1.25rem}
+
+    /* بحث + روابط */
+    .search{flex:1;display:flex;gap:.5rem}
+    .search input{flex:1;padding:.75rem 1rem;border:1px solid #e5e7eb;border-radius:999px}
+    .search button{padding:.75rem 1rem;border:none;border-radius:999px;background:var(--accent);font-weight:800;cursor:pointer}
+    .nav-links{display:flex;gap:1rem}
+    .nav-links a{font-weight:700;color:var(--brand);text-decoration:none}
+
+    /* زر الهامبرجر */
+    .menu-toggle{display:none;flex-direction:column;gap:5px;border:none;background:transparent;cursor:pointer}
+    .menu-toggle span{width:26px;height:3px;background:var(--brand);display:block;border-radius:2px}
+
+    /* قائمة أسفل الهيدر: شرائح التصنيفات */
+    .cats{border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}
+    .cats .inner{display:flex;gap:.5rem;overflow:auto;padding:.6rem 0}
+    .chip{white-space:nowrap;background:var(--chip);border-radius:999px;padding:.45rem .9rem;border:1px solid #e2e8f0;cursor:pointer}
+    .chip.active{background:var(--brand);color:#fff;border-color:transparent}
+
+    /* بانر رئيسي */
+    .hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:16px 0}
+    .banner{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--brand),#1e4c79);min-height:260px}
+    .banner .content{position:absolute;inset:0;padding:2rem;display:flex;flex-direction:column;justify-content:center;color:#fff}
+    .banner h1{margin:0 0 .5rem;font-size:2rem}
+    .banner p{margin:0 0 1rem;color:#e2e8f0}
+    .cta{display:inline-block;background:var(--accent);color:#000;font-weight:900;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none}
+    .side-card{border-radius:var(--radius);box-shadow:var(--shadow);padding:1rem;background:#fff}
+
+    /* أقسام عامة */
+    .section{padding:20px 0}
+    .section h2{margin:0 0 10px}
+
+    /* شبكة المنتجات (تعيد استخدام HTML الحالي لديك) */
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    @media (max-width:1000px){.product-grid{grid-template-columns:repeat(3,1fr)} .hero{grid-template-columns:1fr}}
+    @media (max-width:700px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:420px){.product-grid{grid-template-columns:1fr}}
+
+    /* كروت المنتج الحالية لديك */
+    .card{border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+    .card-image, .thumb{width:100%;aspect-ratio:1/1;object-fit:cover;background:#f8fafc}
+    .card-content{padding:.9rem}
+    .card-title{margin:0 0 .25rem;font-weight:800;font-size:1rem}
+    .card-description{margin:0 0 .5rem;color:var(--muted)}
+    .price{color:var(--brand);font-weight:900}
+    .old{color:var(--muted);text-decoration:line-through;margin-inline-start:.4rem}
+    .card .btn-row{display:flex;gap:.5rem;margin:.8rem}
+    .btn{flex:1;border:none;padding:.7rem;border-radius:10px;cursor:pointer;font-weight:800}
+    .btn.primary{background:var(--brand);color:#fff}
+    .btn.ghost{background:#fff;border:1px solid #e2e8f0}
+
+    /* بانرات أقسام أخرى */
+    .panel{border-radius:var(--radius);box-shadow:var(--shadow);background:#fff;padding:1rem}
+
+    /* فوتر */
+    footer{margin-top:24px;background:#0b2744;color:#cbd5e1}
+    .foot{display:grid;gap:16px;grid-template-columns:2fr 1fr 1fr;padding:1.5rem 0}
+    .foot a{color:#e2e8f0;text-decoration:none}
+    .copyright{background:#091d31;color:#8ba0b6;text-align:center;padding:.6rem}
+
+    /* زر واتساب عائم */
+    .wa{position:fixed;bottom:18px;left:18px;background:#25D366;color:#fff;border-radius:999px;padding:.9rem 1rem;font-weight:900;box-shadow:var(--shadow);text-decoration:none;z-index:70}
+
+    /* استجابة صغيرة */
+    @media (max-width:960px){
+      .nav-links{display:none}
+      .menu-toggle{display:flex}
+    }
+
+    /* قائمة جانبية للجوال */
+    .drawer{position:fixed;top:64px;right:-310px;width:300px;height:calc(100vh - 64px);background:#fff;box-shadow:-5px 0 15px rgba(0,0,0,.1);padding:18px;display:flex;flex-direction:column;gap:12px;transition:right .3s ease;z-index:80}
+    .drawer.open{right:0}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:.3s;z-index:79}
+    .overlay.active{opacity:1;visibility:visible}
+  </style>
+</head>
+<body>
+  <!-- شريط علوي موجز -->
+  <div class="topbar">نوصل لجميع المدن الرئيسية | نقاط مكافآت على كل طلب</div>
+
+  <!-- رأس الموقع -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="nav-row">
+        <a href="#home" class="brand" aria-label="Marmara Home">
+          <img src="./img/logo1.jpg" alt="Marmara Logo" />
+          <span class="brand-name">مرمرة™</span>
+        </a>
+
+        <div class="search">
+          <input placeholder="ابحث عن منتج…" />
+          <button>بحث</button>
+        </div>
+
+        <nav class="nav-links" aria-label="روابط سريعة">
+          <a href="#home">الرئيسية</a>
+          <a href="#about">من نحن</a>
+          <a href="#products">المنتجات</a>
+          <a href="#gallery">المعارض</a>
+          <a href="#map">الفروع</a>
+          <a href="#contact">تواصل</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- شرائح تصنيفات شبيهة -->
+      <div class="cats">
+        <div class="inner">
+          <button class="chip active" data-filter="all">الكل</button>
+          <button class="chip" data-filter="machine">ماكينات</button>
+          <button class="chip" data-filter="grind">أحجار جلخ</button>
+          <button class="chip" data-filter="porcelain">بورسلين</button>
+          <button class="chip" data-filter="drill">مثاقب</button>
+          <button class="chip" data-filter="misc">مستلزمات</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- قائمة جانبية للجوال + غطاء -->
+  <div class="drawer" id="drawer">
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من نحن</a>
+    <a href="#products">المنتجات</a>
+    <a href="#gallery">المعارض</a>
+    <a href="#map">الفروع</a>
+    <a href="#contact">تواصل</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- بانر/واجهة رئيسية + بطاقة جانبية للفروع -->
+  <main>
+    <section class="container hero" id="home">
+      <div class="banner">
+        <div class="content">
+          <h1>أدوات رخام وجرانيت احترافية</h1>
+          <p>مجموعة واسعة، جودة مضمونة، وأسعار منافسة — اكتشف العروض الآن.</p>
+          <a class="cta" href="#products">تسوّق الآن</a>
+        </div>
+        <!-- يمكنك وضع صورة بانر CSS أو <img> كخلفية لو رغبت -->
+      </div>
+      <aside class="side-card">
+        <h3 style="margin-top:0">الفروع الرئيسية</h3>
+        <ul style="margin:0;padding:0 1rem 0 0">
+          <li>مصراتة</li>
+          <li>طرابلس</li>
+        </ul>
+        <hr/>
+        <p style="margin:.5rem 0;color:var(--muted)">دعم واتساب والتوصيل متاح داخل المدن الرئيسية.</p>
+      </aside>
+    </section>
+
+    <!-- من نحن (يعاد استخدام محتواك) -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="panel">
+          <h2>مرحبًا بكم في شركة مرمرة</h2>
+          <p>وجهتكم الموثوقة لمستلزمات الرخام والجرانيت في ليبيا منذ 2018 — منتجات استثنائية تتميز بالجودة والأناقة والملحقات الاحترافية للفنيين.</p>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <a href="#products" class="cta" style="text-decoration:none">استكشف المجموعات</a>
+            <a href="#contact" class="btn" style="text-decoration:none;background:#fff;border:1px solid #e5e7eb">تحدث معنا</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- منتجات: يعيد استخدام شبكة .product-grid و .card الموجودة لديك -->
+    <section id="products" class="section">
+      <div class="container">
+        <h2>منتجات مميزة</h2>
+        <p style="color:var(--muted);margin:.2rem 0 1rem">مجموعة شاملة من أفضل الأدوات والمستلزمات</p>
+
+        <div class="product-grid" id="product-grid">
+          <!-- أمثلة بطاقات (يمكنك إبقاء بطاقاتك الحالية كما هي) -->
+          <article class="card" data-cat="machine">
+            <img class="card-image" src="./img/7.JPG" alt="أداة ماكينة" />
+            <div class="card-content">
+              <h3 class="card-title">أداة قطع ماكينة</h3>
+              <p class="card-description">دقة عالية وجودة صناعية.</p>
+              <div><span class="price">65 د.ل</span> <span class="old">78 د.ل</span></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn primary">أضف للسلة</button>
+              <button class="btn ghost">تفاصيل</button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="grind">
+            <img class="card-image" src="./img/8.JPG" alt="أحجار جلخ" />
+            <div class="card-content">
+              <h3 class="card-title">أدوات جلخ</h3>
+              <p class="card-description">مجموعة واسعة للرخام والجرانيت.</p>
+              <div><span class="price">32 د.ل</span></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn primary">أضف للسلة</button>
+              <button class="btn ghost">تفاصيل</button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="porcelain">
+            <img class="card-image" src="./img/10.JPG" alt="بورسلين" />
+            <div class="card-content">
+              <h3 class="card-title">أدوات بورسلين</h3>
+              <p class="card-description">قطع ناعم ودقيق.</p>
+              <div><span class="price">110 د.ل</span></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn primary">أضف للسلة</button>
+              <button class="btn ghost">تفاصيل</button>
+            </div>
+          </article>
+
+          <article class="card" data-cat="drill">
+            <img class="card-image" src="./img/14.JPG" alt="مثاقب" />
+            <div class="card-content">
+              <h3 class="card-title">أدوات ثقب</h3>
+              <p class="card-description">مثاقب احترافية.</p>
+              <div><span class="price">44 د.ل</span></div>
+            </div>
+            <div class="btn-row">
+              <button class="btn primary">أضف للسلة</button>
+              <button class="btn ghost">تفاصيل</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- معرض / سلايدر (يمكن حقنه لاحقاً بJS لديك) -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="panel">
+          <h2>معرض المنتجات</h2>
+          <p style="color:var(--muted)">أضف سلايدر الصور الموجود لديك أو شبكة صور.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- الفروع -->
+    <section id="map" class="section">
+      <div class="container">
+        <div class="panel">
+          <h2>فروعنا في ليبيا</h2>
+          <div style="display:grid;gap:12px;grid-template-columns:repeat(2,1fr)">
+            <div class="panel" style="padding:12px">
+              <h3 style="margin-top:0">فرع مصراتة</h3>
+              <p>📍 شارع طرابلس الرئيسي، مصراتة</p>
+              <p>📞 +218-51-234-5678</p>
+              <small style="color:var(--muted)">السبت - الخميس: 8:00 ص - 6:00 م</small>
+            </div>
+            <div class="panel" style="padding:12px">
+              <h3 style="margin-top:0">فرع طرابلس</h3>
+              <p>📍 شارع الجمهورية، طرابلس</p>
+              <p>📞 +218-21-987-6543</p>
+              <small style="color:var(--muted)">السبت - الخميس: 8:00 ص - 6:00 م</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تواصل -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="panel">
+          <h2>تواصل معنا</h2>
+          <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div>
+              <h4>الهاتف</h4>
+              <p>+218-51-234-5678<br/>+218-21-987-6543</p>
+              <h4>البريد</h4>
+              <p>info@marmara-supplies.ly<br/>sales@marmara-supplies.ly</p>
+              <h4>العنوان</h4>
+              <p>شارع طرابلس الرئيسي، مصراتة، ليبيا</p>
+            </div>
+            <div>
+              <!-- نموذجك لاحقاً هنا -->
+              <div class="panel" style="background:#f8fafc;border:1px dashed #e2e8f0">نموذج مراسلة (اختياري)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- فوتر -->
+  <footer>
+    <div class="container foot">
+      <div>
+        <h3 style="margin-top:0;color:#fff">مرمرة للأحجار الطبيعية</h3>
+        <p>نقدم أفضل مستلزمات الرخام والجرانيت بأعلى جودة وخدمة موثوقة.</p>
+      </div>
+      <div>
+        <h4 style="margin-top:0;color:#fff">روابط</h4>
+        <a href="#products">المنتجات</a><br>
+        <a href="#gallery">المعارض</a><br>
+        <a href="#contact">اتصل بنا</a>
+      </div>
+      <div>
+        <h4 style="margin-top:0;color:#fff">تواصل</h4>
+        <a href="https://wa.me/218916675188" target="_blank" rel="noopener">واتساب</a><br>
+        <a href="https://www.instagram.com/marmara_company" target="_blank" rel="noopener">إنستغرام</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 مرمرة. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/218916675188" target="_blank" rel="noopener">واتساب</a>
+
+  <script>
+    // قائمة الجوال
+    const btn = document.querySelector('.menu-toggle');
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('overlay');
+    const toggle = ()=>{
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+    };
+    btn && btn.addEventListener('click', toggle);
+    overlay && overlay.addEventListener('click', toggle);
+
+    // تفعيل شرائح التصنيفات لتصفية المنتجات (يعتمد على data-cat في كل بطاقة)
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('#product-grid .card');
+    chips.forEach(ch=>{
+      ch.addEventListener('click', ()=>{
+        chips.forEach(x=>x.classList.remove('active'));
+        ch.classList.add('active');
+        const f = ch.getAttribute('data-filter');
+        cards.forEach(card=>{
+          const match = f==='all' || card.getAttribute('data-cat')===f;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
