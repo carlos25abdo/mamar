@@ -603,6 +603,53 @@
       padding-bottom: 0.2rem;
       margin-right: -0.7rem;
       padding-right: 0.7rem;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE/Edge */
+      scroll-behavior: smooth;
+    }
+
+    .product-slider::-webkit-scrollbar {
+      display: none;
+      /* Chrome/Safari/Webkit */
+    }
+
+    .slider-container {
+      position: relative;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      color: var(--color-text);
+      transition: all 0.2s ease;
+    }
+
+    .slider-arrow:hover {
+      background: var(--color-red);
+      color: #fff;
+      border-color: var(--color-red);
+    }
+
+    .slider-arrow.prev {
+      right: -12px;
+    }
+
+    .slider-arrow.next {
+      left: -12px;
     }
 
     .product-card {
@@ -620,15 +667,19 @@
 
     .product-card-image {
       position: relative;
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
 
     .product-card-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transform: scale(1.03);
+      object-fit: contain;
       transition: transform 0.25s ease;
     }
 
@@ -1343,75 +1394,89 @@
             <h3 class="product-category-title">أدوات قطع ماكينة</h3>
             <span class="product-category-tag">للماكينات الصناعية</span>
           </div>
-          <div class="product-slider">
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/100.jpeg" alt="دسك جرانيت" />
+          <div class="slider-container">
+            <button class="slider-arrow prev" aria-label="السابق">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <button class="slider-arrow next" aria-label="التالي">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="product-slider machine-slider">
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/100.jpeg" alt="دسك جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك جرانيت</div>
+                  <div class="product-card-desc">مقاس 400x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك جرانيت</div>
-                <div class="product-card-desc">مقاس 400x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/101.jpeg" alt="دسك جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك جرانيت</div>
+                  <div class="product-card-desc">مقاس 400x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/101.jpeg" alt="دسك جرانيت" />
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/102.jpeg" alt="دسك جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك جرانيت</div>
+                  <div class="product-card-desc">مقاس 400x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك جرانيت</div>
-                <div class="product-card-desc">مقاس 400x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/103.jpeg" alt="دسك رخام" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك رخام</div>
+                  <div class="product-card-desc">مقاس 400x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/102.jpeg" alt="دسك جرانيت" />
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/104.jpeg" alt="دسك رخام" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك رخام</div>
+                  <div class="product-card-desc">مقاسات: 300x50 / 350x50 / 400x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك جرانيت</div>
-                <div class="product-card-desc">مقاس 400x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/105.jpeg" alt="حشاش تايب لوك" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حشاش تايب لوك</div>
+                  <div class="product-card-desc">مقاسات: 450x50 / 500x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/103.jpeg" alt="دسك رخام" />
-              </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك رخام</div>
-                <div class="product-card-desc">مقاس 400x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/104.jpeg" alt="دسك رخام" />
-              </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك رخام</div>
-                <div class="product-card-desc">مقاسات: 300x50 / 350x50 / 400x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/105.jpeg" alt="حشاش تايب لوك" />
-              </div>
-              <div class="product-card-body">
-                <div class="product-card-title">حشاش تايب لوك</div>
-                <div class="product-card-desc">مقاسات: 450x50 / 500x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/106.jpeg" alt="دسك بورسلين" />
-              </div>
-              <div class="product-card-body">
-                <div class="product-card-title">دسك بورسلين</div>
-                <div class="product-card-desc">مقاس 300x50 mm</div>
-                <span class="product-card-cta">تفاصيل أكثر</span>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/106.jpeg" alt="دسك بورسلين" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك بورسلين</div>
+                  <div class="product-card-desc">مقاس 300x50 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1897,6 +1962,31 @@
         deactivateModal();
       }
     });
+
+    // Slider Arrows Logic
+    const machineSlider = document.querySelector(".machine-slider");
+    const prevBtn = document.querySelector(".slider-arrow.prev");
+    const nextBtn = document.querySelector(".slider-arrow.next");
+
+    if (machineSlider && prevBtn && nextBtn) {
+      const scrollAmount = 280; // Approximate card width + gap
+
+      prevBtn.addEventListener("click", () => {
+        machineSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        machineSlider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      // Update arrow visibility on scroll
+      machineSlider.addEventListener("scroll", () => {
+        const isAtStart = machineSlider.scrollLeft >= 0; // RTL: scrollLeft is 0 at start, negative as it moves left
+        const isAtEnd = Math.abs(machineSlider.scrollLeft) + machineSlider.clientWidth >= machineSlider.scrollWidth - 10;
+
+        // Simple logic: just show them, or you could hide/fade them
+      });
+    }
   </script>
 </body>
 
