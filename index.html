@@ -673,13 +673,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
     }
 
     .product-card-image img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       transition: transform 0.25s ease;
     }
 
@@ -1454,7 +1453,12 @@
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك رخام</div>
-                  <div class="product-card-desc">مقاسات: 300x50 / 350x50 / 400x50 mm</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 300x50 mm</div>
+                    <div style="margin-top:2px;">• 350x50 mm</div>
+                    <div style="margin-top:2px;">• 400x50 mm</div>
+                  </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
@@ -1464,7 +1468,11 @@
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حشاش تايب لوك</div>
-                  <div class="product-card-desc">مقاسات: 450x50 / 500x50 mm</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 450x50 mm</div>
+                    <div style="margin-top:2px;">• 500x50 mm</div>
+                  </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
@@ -1491,26 +1499,234 @@
             <h3 class="product-category-title">أدوات قطع وجلخ</h3>
             <span class="product-category-tag">تشطيب وصقل</span>
           </div>
-          <div class="product-slider">
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/8.JPG" alt="أدوات قطع وجلخ" />
+          <div class="slider-container">
+            <button class="slider-arrow prev" aria-label="السابق">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <button class="slider-arrow next" aria-label="التالي">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="product-slider grinding-slider">
+              <!-- 200: Granite Cutting (Golden) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/200.jpeg" alt="دسك قطع جرانيت (ذهبي)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك قطع جرانيت (ذهبي)</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                    <div style="margin-top:2px;">• 125x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">أقراص جلخ متعددة الاستخدام</div>
-                <div class="product-card-desc">مناسبة للرخام، الجرانيت، وبعض أنواع الحجر الصناعي.</div>
-                <span class="product-card-cta">تعرّف على الفئات</span>
+
+              <!-- 201: Granite Cutting -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/201.jpeg" alt="دسك قطع جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك قطع جرانيت</div>
+                  <div class="product-card-desc">مقاس 180x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/29.JPG" alt="أحجار جلخ" />
+
+              <!-- 203: Granite Grinding -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/203.jpeg" alt="حلية جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية جرانيت</div>
+                  <div class="product-card-desc">مقاس 230x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">أحجار جلخ متخصصة</div>
-                <div class="product-card-desc">درجات خشونة مختلفة للتسوية والتشطيب النهائي.</div>
-                <span class="product-card-cta">اطلب توصية فنية</span>
+
+              <!-- 205: Granite Grinding (Multi) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/205.jpeg" alt="حلية جرانيت" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية جرانيت</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 180x14 mm</div>
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                    <div style="margin-top:2px;">• 125x14 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
+
+              <!-- 204: Marble Cutting -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/204.jpeg" alt="دسك قطع رخام" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك قطع رخام</div>
+                  <div class="product-card-desc">مقاس 180x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 206: Marble Cutting (Flange) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/206.jpeg" alt="دسك قطع رخام (مع فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك قطع رخام (مع فلانجة)</div>
+                  <div class="product-card-desc">مقاس 125x14 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 207: Marble Cutting (No Flange) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/207.jpeg" alt="دسك قطع رخام (بذون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">دسك قطع رخام (بذون فلانجة)</div>
+                  <div class="product-card-desc">مقاس 125x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 209: Marble Grinding (Flange) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/209.jpeg" alt="حلية رخام (فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (فلانجة)</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 230x22.23 mm</div>
+                    <div style="margin-top:2px;">• 230x14 mm</div>
+                    <div style="margin-top:2px;">• 180x14 mm</div>
+                    <div style="margin-top:2px;">• 125x14 mm</div>
+                    <div style="margin-top:2px;">• 80x14 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 210: Marble Grinding (Flange) - Extra Item -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/210.jpeg" alt="حلية رخام (فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 211: Marble Grinding (Flange) - Extra Item -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/211.jpeg" alt="حلية رخام (فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 212: Marble Grinding (No Flange) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/212.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 230x22.23 mm</div>
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 213-218: Marble Grinding (No Flange) - Extra Items -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/213.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/214.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/215.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/216.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/217.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/218.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
+                  <div class="product-card-desc">متوفرة بكافة المقاسات</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
             </div>
           </div>
           <div class="product-category-footer">
@@ -1524,25 +1740,118 @@
             <h3 class="product-category-title">أدوات قطع بورسلين</h3>
             <span class="product-category-tag">قص دقيق بدون تكسير</span>
           </div>
-          <div class="product-slider">
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/10.JPG" alt="أدوات بورسلين" />
+          <div class="slider-container">
+            <button class="slider-arrow prev" aria-label="السابق">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <button class="slider-arrow next" aria-label="التالي">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="product-slider porcelain-slider">
+              <!-- 300: Porcelain Cutting -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/300.jpeg" alt="قطع بورسالين" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">قطع بورسالين</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                    <div style="margin-top:2px;">• 125x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">أقراص بورسلين احترافية</div>
-                <div class="product-card-desc">خط قطع نظيف مع تقليل الشرخ والحواف المكسورة.</div>
-                <span class="product-card-cta">تفاصيل المنتج</span>
+
+              <!-- 301: Porcelain Cutting -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/301.jpeg" alt="قطع بورسالين" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">قطع بورسالين</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                    <div style="margin-top:2px;">• 125x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card-image">
-                <img src="./img/13.JPG" alt="أدوات بورسلين متنوعة" />
+
+              <!-- 302: Porcelain Grinding (Braided) -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/302.jpeg" alt="حلية بورسالين (مضفور بسن)" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية بورسالين (مضفور بسن)</div>
+                  <div class="product-card-desc">مقاس 125x14 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
-              <div class="product-card-body">
-                <div class="product-card-title">خيارات متعددة للأحجام</div>
-                <div class="product-card-desc">مقاسات تناسب البورسلين الكبير والصغير.</div>
-                <span class="product-card-cta">استعرض المقاسات</span>
+
+              <!-- 303: Cell/Honeycomb -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/303.jpeg" alt="خلية" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">خلية</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 125x14 mm</div>
+                    <div style="margin-top:2px;">• 125x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 304: Cell/Honeycomb -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/304.jpeg" alt="خلية" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">خلية</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 125x14 mm</div>
+                    <div style="margin-top:2px;">• 125x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 305: Spacers -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/305.jpeg" alt="فواصل" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">فواصل</div>
+                  <div class="product-card-desc">مقاس 115x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 306: Spacers -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/306.jpeg" alt="فواصل" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">فواصل</div>
+                  <div class="product-card-desc">مقاس 115x22.23 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1571,6 +1880,85 @@
           </div>
           <div class="product-category-footer">
             <a href="#contact" class="btn btn-outline">اسأل عن أطقم الحفر الكاملة</a>
+          </div>
+        </article>
+
+        <!-- فرز ماكينة -->
+        <article class="product-category-card">
+          <div class="product-category-header">
+            <h3 class="product-category-title">أدوات فرز ماكينة</h3>
+            <span class="product-category-tag">للتشكيل والحفر</span>
+          </div>
+          <div class="slider-container">
+            <button class="slider-arrow prev" aria-label="السابق">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+            <button class="slider-arrow next" aria-label="التالي">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="product-slider milling-slider">
+              <!-- 307: Standard Milling -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/307.jpeg" alt="فرز عادي" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">فرز عادي</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 12 mm</div>
+                    <div style="margin-top:2px;">• 22 mm</div>
+                    <div style="margin-top:2px;">• 32 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 308: Silent Milling -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/308.jpeg" alt="فرز كاتم" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">فرز كاتم</div>
+                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 309: Wide Tooth -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/309.jpeg" alt="سن عريضة" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">سن عريضة</div>
+                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+
+              <!-- 310: Rash Milling -->
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/310.jpeg" alt="فرز رش" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">فرز رش</div>
+                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-category-footer">
+            <a href="#contact" class="btn btn-outline">استفسر عن أدوات الفرز</a>
           </div>
         </article>
 
@@ -1964,29 +2352,32 @@
     });
 
     // Slider Arrows Logic
-    const machineSlider = document.querySelector(".machine-slider");
-    const prevBtn = document.querySelector(".slider-arrow.prev");
-    const nextBtn = document.querySelector(".slider-arrow.next");
+    function initSlider(sliderSelector) {
+      const slider = document.querySelector(sliderSelector);
+      if (!slider) return;
 
-    if (machineSlider && prevBtn && nextBtn) {
-      const scrollAmount = 280; // Approximate card width + gap
+      const container = slider.parentElement;
+      const prevBtn = container.querySelector(".slider-arrow.prev");
+      const nextBtn = container.querySelector(".slider-arrow.next");
 
-      prevBtn.addEventListener("click", () => {
-        machineSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      });
+      if (prevBtn && nextBtn) {
+        const scrollAmount = 280; // Approximate card width + gap
 
-      nextBtn.addEventListener("click", () => {
-        machineSlider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      });
+        prevBtn.addEventListener("click", () => {
+          slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
 
-      // Update arrow visibility on scroll
-      machineSlider.addEventListener("scroll", () => {
-        const isAtStart = machineSlider.scrollLeft >= 0; // RTL: scrollLeft is 0 at start, negative as it moves left
-        const isAtEnd = Math.abs(machineSlider.scrollLeft) + machineSlider.clientWidth >= machineSlider.scrollWidth - 10;
-
-        // Simple logic: just show them, or you could hide/fade them
-      });
+        nextBtn.addEventListener("click", () => {
+          slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+      }
     }
+
+    // Initialize both sliders
+    initSlider(".machine-slider");
+    initSlider(".grinding-slider");
+    initSlider(".porcelain-slider");
+    initSlider(".milling-slider");
   </script>
 </body>
 
