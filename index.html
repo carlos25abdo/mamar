@@ -22,6 +22,11 @@
 
   <link rel="icon" type="image/png" href="./img/logo1.jpg" />
 
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./img/logo1.jpg" as="image" />
+  <link rel="preload" href="./img/marmara.jpg" as="image" />
+  <link rel="preload" href="./font/BigVesta-Arabic-Regular.ttf" as="font" type="font/truetype" crossorigin />
+
   <style>
     :root {
       --color-red: #dc2626;
@@ -1203,7 +1208,7 @@
       <div class="site-header-inner">
         <a href="#home" class="brand">
           <div class="brand-logo">
-            <img src="./img/logo1.jpg" alt="مرمرة - Marmara Logo" />
+            <img src="./img/logo1.jpg" alt="مرمرة - Marmara Logo" decoding="async" fetchpriority="high" />
           </div>
           <div>
             <div class="brand-text">شركة مرمرة الكبرى ™</div>
@@ -1271,7 +1276,7 @@
 
           <div class="hero-logo-wrap">
             <div class="hero-logo">
-              <img src="./img/logo1.jpg" alt="Marmara Logo" />
+              <img src="./img/logo1.jpg" alt="Marmara Logo" decoding="async" fetchpriority="high" />
             </div>
             <div>
               <div class="hero-title">شركة مرمرة الكبرى ™</div>
@@ -1306,7 +1311,7 @@
         </div>
 
         <div class="hero-visual" aria-label="معرض مصغّر لمنتجات مرمرة">
-          <img src="./img/marmara.jpg" alt="مرمرة الكبرى" />
+          <img src="./img/marmara.jpg" alt="مرمرة الكبرى" decoding="async" fetchpriority="high" />
         </div>
       </div>
     </section>
@@ -1338,7 +1343,7 @@
           <!-- ✅ الإضافة الجديدة: صورة + شرح -->
           <div class="about-extra">
             <div class="about-image">
-              <img src="./img/60.jpg" alt="شركة مرمرة الكبرى منذ عام 2018" />
+              <img src="./img/60.jpg" alt="شركة مرمرة الكبرى منذ عام 2018" loading="lazy" decoding="async" />
             </div>
             <div class="about-text-long">
               <p>
@@ -1409,7 +1414,7 @@
             <div class="product-slider machine-slider">
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/100.jpeg" alt="دسك جرانيت" />
+                  <img src="./img/100.jpeg" alt="دسك جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك جرانيت</div>
@@ -1419,7 +1424,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/102.jpeg" alt="دسك جرانيت" />
+                  <img src="./img/102.jpeg" alt="دسك جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك جرانيت</div>
@@ -1429,7 +1434,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/103.jpeg" alt="دسك رخام" />
+                  <img src="./img/103.jpeg" alt="دسك رخام" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك رخام</div>
@@ -1439,7 +1444,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/104.jpeg" alt="دسك رخام" />
+                  <img src="./img/104.jpeg" alt="دسك رخام" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك رخام</div>
@@ -1454,7 +1459,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/105.jpeg" alt="حشاش تايب لوك" />
+                  <img src="./img/105.jpeg" alt="حشاش تايب لوك" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حشاش تايب لوك</div>
@@ -1468,7 +1473,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/106.jpeg" alt="دسك بورسلين" />
+                  <img src="./img/106.jpeg" alt="دسك بورسلين" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك بورسلين</div>
@@ -1478,7 +1483,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/101.jpeg" alt="دسك جرانيت" />
+                  <img src="./img/101.jpeg" alt="دسك جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك جرانيت</div>
@@ -1518,14 +1523,14 @@
               <!-- 209: Marble Grinding (Flange) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/209.jpeg" alt="حلية رخام (فلانجة)" />
+                  <img src="./img/209.jpeg" alt="حلية رخام (فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">قطع رخام </div>
                   <div class="product-card-desc">
                     مقاسات:
                     <div style="margin-top:2px;">• 180x22.23 mm</div>
-                    
+
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
@@ -1534,7 +1539,7 @@
               <!-- 210: Marble Grinding (Flange) - Extra Item -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/210.jpeg" alt="حلية رخام (فلانجة)" />
+                  <img src="./img/210.jpeg" alt="حلية رخام (فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">قطع رخام (مع فلانجة)</div>
@@ -1549,7 +1554,7 @@
               <!-- 211: Marble Grinding (Flange) - Extra Item -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/211.jpeg" alt="حلية رخام (فلانجة)" />
+                  <img src="./img/211.jpeg" alt="حلية رخام (فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">قطع رخام (بدون فلانجة)</div>
@@ -1564,7 +1569,7 @@
               <!-- 212: Marble Grinding (No Flange) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/212.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/212.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (مع فلانجة)</div>
@@ -1573,8 +1578,8 @@
                     <div style="margin-top:2px;">• 230x22.23 mm</div>
                     <div style="margin-top:2px;">• 230x14mm</div>
                     <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
+                    <div style="margin-top:2px;">• 125x14mm</div>
+                    <div style="margin-top:2px;">• 80x14mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
@@ -1583,7 +1588,7 @@
               <!-- 213-218: Marble Grinding (No Flange) - Extra Items -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/214.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/214.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (مع فلانجة)</div>
@@ -1592,15 +1597,15 @@
                     <div style="margin-top:2px;">• 230x22.23 mm</div>
                     <div style="margin-top:2px;">• 230x14mm</div>
                     <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
+                    <div style="margin-top:2px;">• 125x14mm</div>
+                    <div style="margin-top:2px;">• 80x14mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/215.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/215.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (مع فلانجة)</div>
@@ -1609,32 +1614,15 @@
                     <div style="margin-top:2px;">• 230x22.23 mm</div>
                     <div style="margin-top:2px;">• 230x14mm</div>
                     <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
+                    <div style="margin-top:2px;">• 125x14mm</div>
+                    <div style="margin-top:2px;">• 80x14mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/216.jpeg" alt="حلية رخام (بدون فلانجة)" />
-                </div>
-                <div class="product-card-body">
-                 <div class="product-card-title">حلية رخام (مع فلانجة)</div>
-                  <div class="product-card-desc">
-                    مقاسات:
-                    <div style="margin-top:2px;">• 230x22.23 mm</div>
-                    <div style="margin-top:2px;">• 230x14mm</div>
-                    <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
-                  </div>
-                  <span class="product-card-cta">تفاصيل أكثر</span>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-image">
-                  <img src="./img/217.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/216.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (مع فلانجة)</div>
@@ -1643,15 +1631,15 @@
                     <div style="margin-top:2px;">• 230x22.23 mm</div>
                     <div style="margin-top:2px;">• 230x14mm</div>
                     <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
+                    <div style="margin-top:2px;">• 125x14mm</div>
+                    <div style="margin-top:2px;">• 80x14mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/213.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/217.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (مع فلانجة)</div>
@@ -1660,15 +1648,29 @@
                     <div style="margin-top:2px;">• 230x22.23 mm</div>
                     <div style="margin-top:2px;">• 230x14mm</div>
                     <div style="margin-top:2px;">• 180x14mm</div>
-                   <div style="margin-top:2px;">• 125x14mm</div>
-                   <div style="margin-top:2px;">• 80x14mm</div>
+                    <div style="margin-top:2px;">• 125x14mm</div>
+                    <div style="margin-top:2px;">• 80x14mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/218.jpeg" alt="حلية رخام (بدون فلانجة)" />
+                  <img src="./img/213.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
+                </div>
+                <div class="product-card-body">
+                  <div class="product-card-title">حلية رخام (مع فلانجة)</div>
+                  <div class="product-card-desc">
+                    مقاسات:
+                    <div style="margin-top:2px;">• 180x22.23 mm</div>
+                    <div style="margin-top:2px;">• 230x22.23 mm</div>
+                  </div>
+                  <span class="product-card-cta">تفاصيل أكثر</span>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card-image">
+                  <img src="./img/218.jpeg" alt="حلية رخام (بدون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية رخام (بدون فلانجة)</div>
@@ -1682,7 +1684,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/200.jpeg" alt="دسك قطع جرانيت (ذهبي)" />
+                  <img src="./img/200.jpeg" alt="دسك قطع جرانيت (ذهبي)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك قطع جرانيت (ذهبي)</div>
@@ -1698,7 +1700,7 @@
               <!-- 201: Granite Cutting -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/201.jpeg" alt="دسك قطع جرانيت" />
+                  <img src="./img/201.jpeg" alt="دسك قطع جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">دسك قطع جرانيت</div>
@@ -1710,7 +1712,7 @@
               <!-- 203: Granite Grinding -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/203.jpeg" alt="حلية جرانيت" />
+                  <img src="./img/203.jpeg" alt="حلية جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية جرانيت</div>
@@ -1722,7 +1724,7 @@
               <!-- 205: Granite Grinding (Multi) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/205.jpeg" alt="حلية جرانيت" />
+                  <img src="./img/205.jpeg" alt="حلية جرانيت" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية جرانيت</div>
@@ -1739,7 +1741,7 @@
               <!-- 204: Marble Cutting -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/204.jpeg" alt="دسك قطع رخام" />
+                  <img src="./img/204.jpeg" alt="دسك قطع رخام" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية جرانيت</div>
@@ -1756,10 +1758,10 @@
               <!-- 206: Marble Cutting (Flange) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/206.jpeg" alt="دسك قطع رخام (مع فلانجة)" />
+                  <img src="./img/206.jpeg" alt="دسك قطع رخام (مع فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
-                 <div class="product-card-title">حلية جرانيت</div>
+                  <div class="product-card-title">حلية جرانيت</div>
                   <div class="product-card-desc">
                     مقاسات:
                     <div style="margin-top:2px;">• 180x14 mm</div>
@@ -1773,10 +1775,10 @@
               <!-- 207: Marble Cutting (No Flange) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/207.jpeg" alt="دسك قطع رخام (بذون فلانجة)" />
+                  <img src="./img/207.jpeg" alt="دسك قطع رخام (بذون فلانجة)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
-                 <div class="product-card-title">حلية جرانيت</div>
+                  <div class="product-card-title">حلية جرانيت</div>
                   <div class="product-card-desc">
                     مقاسات:
                     <div style="margin-top:2px;">• 180x14 mm</div>
@@ -1820,7 +1822,7 @@
               <!-- 303: Cell/Honeycomb -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/303.jpeg" alt="خلية" />
+                  <img src="./img/303.jpeg" alt="خلية" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">خلية</div>
@@ -1836,7 +1838,7 @@
               <!-- 304: Cell/Honeycomb -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/304.jpeg" alt="خلية" />
+                  <img src="./img/304.jpeg" alt="خلية" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">خلية</div>
@@ -1852,7 +1854,7 @@
               <!-- 305: Spacers -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/305.jpeg" alt="فواصل" />
+                  <img src="./img/305.jpeg" alt="فواصل" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">فواصل</div>
@@ -1864,7 +1866,7 @@
               <!-- 306: Spacers -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/306.jpeg" alt="فواصل" />
+                  <img src="./img/306.jpeg" alt="فواصل" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">فواصل</div>
@@ -1874,7 +1876,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/300.jpeg" alt="قطع بورسلين" />
+                  <img src="./img/300.jpeg" alt="قطع بورسلين" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">قطع بورسلين</div>
@@ -1890,7 +1892,7 @@
               <!-- 301: Porcelain Cutting -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/301.jpeg" alt="قطع بورسلين" />
+                  <img src="./img/301.jpeg" alt="قطع بورسلين" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">قطع بورسلين</div>
@@ -1906,7 +1908,7 @@
               <!-- 302: Porcelain Grinding (Braided) -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/302.jpeg" alt="حلية بورسلين (مضفور بسن)" />
+                  <img src="./img/302.jpeg" alt="حلية بورسلين (مضفور بسن)" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">حلية بورسلين (مضفور بسن)</div>
@@ -1930,7 +1932,7 @@
           <div class="product-slider">
             <div class="product-card">
               <div class="product-card-image">
-                <img src="./img/400.jpeg" alt="جرانيت" />
+                <img src="./img/400.jpeg" alt="جرانيت" loading="lazy" decoding="async" />
               </div>
               <div class="product-card-body">
                 <div class="product-card-title">جرانيت</div>
@@ -1940,7 +1942,7 @@
             </div>
             <div class="product-card">
               <div class="product-card-image">
-                <img src="./img/401.jpeg" alt="بورسلين والرخام والسيراميك" />
+                <img src="./img/401.jpeg" alt="بورسلين والرخام والسيراميك" loading="lazy" decoding="async" />
               </div>
               <div class="product-card-body">
                 <div class="product-card-title">بورسلين والرخام والسيراميك</div>
@@ -1977,15 +1979,15 @@
               <!-- 307: Standard Milling -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/307.jpeg" alt="فرز عادي" />
+                  <img src="./img/307.jpeg" alt="فرز عادي" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">فرز عادي</div>
                   <div class="product-card-desc">
                     مقاسات:
-                    <div style="margin-top:2px;">• 12 mm</div>
-                    <div style="margin-top:2px;">• 22 mm</div>
-                    <div style="margin-top:2px;">• 32 mm</div>
+                    <div style="margin-top:2px;">• 12mm  </div>
+                    <div style="margin-top:2px;">• 22mm</div>
+                    <div style="margin-top:2px;">• 32mm</div>
                   </div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
@@ -1994,11 +1996,11 @@
               <!-- 308: Silent Milling -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/308.jpeg" alt="فرز كاتم" />
+                  <img src="./img/308.jpeg" alt="فرز كاتم" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">فرز كاتم</div>
-                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <div class="product-card-desc">مقاس 22mm</div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
@@ -2006,11 +2008,11 @@
               <!-- 309: Wide Tooth -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/309.jpeg" alt="سن عريضة" />
+                  <img src="./img/309.jpeg" alt="سن عريضة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">سن عريضة</div>
-                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <div class="product-card-desc">مقاس 22mm</div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
@@ -2018,11 +2020,11 @@
               <!-- 310: Rash Milling -->
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/310.jpeg" alt="فرز رش" />
+                  <img src="./img/310.jpeg" alt="فرز رش" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">فرز رش</div>
-                  <div class="product-card-desc">مقاس 22 mm</div>
+                  <div class="product-card-desc">مقاس 22mm</div>
                   <span class="product-card-cta">تفاصيل أكثر</span>
                 </div>
               </div>
@@ -2056,7 +2058,7 @@
 
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/500.jpeg" alt="أدوات متنوعة" />
+                  <img src="./img/500.jpeg" alt="أدوات متنوعة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">مستلزمات متنوعة</div>
@@ -2066,7 +2068,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/501.jpeg" alt="أدوات متنوعة" />
+                  <img src="./img/501.jpeg" alt="أدوات متنوعة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">مستلزمات متنوعة</div>
@@ -2076,7 +2078,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/502.jpeg" alt="أدوات متنوعة" />
+                  <img src="./img/502.jpeg" alt="أدوات متنوعة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">مستلزمات متنوعة</div>
@@ -2086,7 +2088,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/503.jpeg" alt="أدوات متنوعة" />
+                  <img src="./img/503.jpeg" alt="أدوات متنوعة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">مستلزمات متنوعة</div>
@@ -2096,7 +2098,7 @@
               </div>
               <div class="product-card">
                 <div class="product-card-image">
-                  <img src="./img/18.JPG" alt="مستلزمات متنوعة" />
+                  <img src="./img/18.JPG" alt="مستلزمات متنوعة" loading="lazy" decoding="async" />
                 </div>
                 <div class="product-card-body">
                   <div class="product-card-title">مستلزمات تركيب وإسناد</div>
@@ -2147,49 +2149,49 @@
         <div class="tools-slider-card">
           <div class="tools-main">
             <div class="tools-slide">
-              <img src="./img/IMG_3151.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3151.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3157.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3157.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3176.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3176.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3184.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3184.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3187.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3187.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3189.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3189.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3193.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3193.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3197.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3197.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3199.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3199.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3225.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3225.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3226.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3226.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3231.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3231.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3232.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3232.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3239.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3239.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
             <div class="tools-slide">
-              <img src="./img/IMG_3242.JPG" alt="عرض منتجات مرمرة" />
+              <img src="./img/IMG_3242.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -2218,28 +2220,28 @@
 
         <div class="gallery-grid" id="gallery-grid">
           <div class="gallery-item" data-category="machine" data-label="أدوات قطع ماكينة">
-            <img src="./img/7.JPG" alt="ماكينة" />
+            <img src="./img/7.JPG" alt="ماكينة" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="machine" data-label="شفرات ماكينة">
-            <img src="./img/30.JPG" alt="ماكينة" />
+            <img src="./img/30.JPG" alt="ماكينة" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="grind" data-label="أقراص جلخ">
-            <img src="./img/8.JPG" alt="جلخ" />
+            <img src="./img/8.JPG" alt="جلخ" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="grind" data-label="أحجار جلخ">
-            <img src="./img/24.JPG" alt="جلخ" />
+            <img src="./img/24.JPG" alt="جلخ" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="porcelain" data-label="أقراص بورسلين">
-            <img src="./img/10.JPG" alt="بورسلين" />
+            <img src="./img/10.JPG" alt="بورسلين" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="porcelain" data-label="أدوات بورسلين">
-            <img src="./img/22.JPG" alt="بورسلين" />
+            <img src="./img/22.JPG" alt="بورسلين" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="drill" data-label="مثاقب حجر">
-            <img src="./img/14.JPG" alt="ثقب" />
+            <img src="./img/14.JPG" alt="ثقب" loading="lazy" decoding="async" />
           </div>
           <div class="gallery-item" data-category="misc" data-label="أدوات مساعدة">
-            <img src="./img/18.JPG" alt="مستلزمات" />
+            <img src="./img/18.JPG" alt="مستلزمات" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -2309,7 +2311,7 @@
 
           <div class="contact-card">
             <h4>الفروع</h4>
-            <p>📍 مصراتة – الدائري الرابع بجانب شيل الصل.</p>
+            <p>📍 مصراتة – الدائري الرابع بجانب محطة وقود بدر</p>
             <p>📍 مصراتة - تقاطع زاوية التير مقابل جامع بن غزي.</p>
           </div>
 
