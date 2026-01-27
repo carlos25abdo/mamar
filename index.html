@@ -770,11 +770,10 @@
 
     /* SLIDER "معرض الأدوات" */
     .tools-slider-card {
-      background: #0f172a;
+      background: transparent;
       border-radius: var(--radius-xl);
-      padding: 1.2rem;
+      padding: 0;
       color: #f9fafb;
-      box-shadow: var(--shadow-strong);
       position: relative;
       overflow: hidden;
     }
@@ -786,21 +785,35 @@
       scroll-snap-type: x mandatory;
       margin-right: -0.5rem;
       padding-right: 0.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      scroll-behavior: smooth;
+    }
+
+    .tools-main::-webkit-scrollbar {
+      display: none;
     }
 
     .tools-slide {
-      flex: 0 0 85%;
+      flex: 0 0 auto;
       border-radius: 18px;
       overflow: hidden;
       scroll-snap-align: center;
       position: relative;
-      border: 1px solid rgba(248, 250, 252, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.1);
     }
 
     .tools-slide img {
-      width: 100%;
-      height: 450px;
+      width: auto;
+      max-width: 100vw;
+      height: 250px;
       object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .tools-slide img {
+        height: 500px;
+      }
     }
 
     /* FILTER GALLERY */
@@ -1985,7 +1998,7 @@
                   <div class="product-card-title">فرز عادي</div>
                   <div class="product-card-desc">
                     مقاسات:
-                    <div style="margin-top:2px;">• 12mm  </div>
+                    <div style="margin-top:2px;">• 12mm </div>
                     <div style="margin-top:2px;">• 22mm</div>
                     <div style="margin-top:2px;">• 32mm</div>
                   </div>
@@ -2108,9 +2121,7 @@
               </div>
             </div>
           </div>
-          <div class="product-category-footer">
-            <a href="#contact" class="btn btn-outline">اطلب كتالوج كامل PDF</a>
-          </div>
+
         </article>
 
         <!-- STATS ROW -->
@@ -2146,7 +2157,19 @@
           </p>
         </div>
 
-        <div class="tools-slider-card">
+        <div class="tools-slider-card slider-container">
+          <button class="slider-arrow prev" aria-label="السابق">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+          <button class="slider-arrow next" aria-label="التالي">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
           <div class="tools-main">
             <div class="tools-slide">
               <img src="./img/IMG_3151.JPG" alt="عرض منتجات مرمرة" loading="lazy" decoding="async" />
@@ -2199,53 +2222,7 @@
     </section>
 
     <!-- FILTER GALLERY -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <div class="section-header">
-          <div class="pill-eyebrow">معرض الصور</div>
-          <h2 class="section-title">استكشف منتجاتنا بالتفصيل</h2>
-          <p class="section-description">
-            اختر نوع الأداة وشاهد مجموعة من الصور الحقيقية للمنتجات.
-          </p>
-        </div>
 
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">الكل</button>
-          <button class="filter-btn" data-filter="machine">ماكينة</button>
-          <button class="filter-btn" data-filter="grind">جلخ</button>
-          <button class="filter-btn" data-filter="porcelain">بورسلين</button>
-          <button class="filter-btn" data-filter="drill">ثقب</button>
-          <button class="filter-btn" data-filter="misc">أخرى</button>
-        </div>
-
-        <div class="gallery-grid" id="gallery-grid">
-          <div class="gallery-item" data-category="machine" data-label="أدوات قطع ماكينة">
-            <img src="./img/7.JPG" alt="ماكينة" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="machine" data-label="شفرات ماكينة">
-            <img src="./img/30.JPG" alt="ماكينة" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="grind" data-label="أقراص جلخ">
-            <img src="./img/8.JPG" alt="جلخ" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="grind" data-label="أحجار جلخ">
-            <img src="./img/24.JPG" alt="جلخ" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="porcelain" data-label="أقراص بورسلين">
-            <img src="./img/10.JPG" alt="بورسلين" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="porcelain" data-label="أدوات بورسلين">
-            <img src="./img/22.JPG" alt="بورسلين" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="drill" data-label="مثاقب حجر">
-            <img src="./img/14.JPG" alt="ثقب" loading="lazy" decoding="async" />
-          </div>
-          <div class="gallery-item" data-category="misc" data-label="أدوات مساعدة">
-            <img src="./img/18.JPG" alt="مستلزمات" loading="lazy" decoding="async" />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- BRANCHES -->
     <section id="map" class="section">
@@ -2302,12 +2279,7 @@
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card">
-            <h4>أرقام التواصل</h4>
-            <p>📞 هاتف: <strong>0916675188</strong></p>
-            <p>📞 هاتف: <strong>0917258337</strong></p>
-            <p>💬 واتساب متاح على الرقمين</p>
-          </div>
+
 
           <div class="contact-card">
             <h4>الفروع</h4>
@@ -2511,13 +2483,13 @@
       const nextBtn = container.querySelector(".slider-arrow.next");
 
       if (prevBtn && nextBtn) {
-        const scrollAmount = 280; // Approximate card width + gap
-
         prevBtn.addEventListener("click", () => {
+          const scrollAmount = slider.offsetWidth * 0.8;
           slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });
 
         nextBtn.addEventListener("click", () => {
+          const scrollAmount = slider.offsetWidth * 0.8;
           slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
         });
       }
@@ -2529,6 +2501,7 @@
     initSlider(".porcelain-slider");
     initSlider(".milling-slider");
     initSlider(".misc-slider");
+    initSlider(".tools-main");
   </script>
 </body>
 
